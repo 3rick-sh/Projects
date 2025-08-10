@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de temperatura/3rick_Sh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    background-color: rgb(10, 10, 10);
+    margin: 0;
+    background: linear-gradient(to left bottom, ligthgreen, ligthblue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    color: rgb(0, 143, 143);
+}
+
+.container {
+    background: rgba(92, 92, 92, 0.3);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 85%;
+    max-width: 450px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-size: 31px;
+}
+
+.temp-container {
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.input {
+    width: 220px;
+    font-family: monospace;
+    padding: 5px;
+    float: right;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(0, 255, 255, 0.247);
+    color: black;
+    font-size: 18px;
+}
+
+.input::placeholder {
+    color: darkgray;
+}
+    </style>
+    <div class="container"> 
+        <h1 class="heading">Calculadora de temperatura</h1>
+        <div class="temp-container">
+            <label for="celsius">Celsius</label>
+        <input 
+            onchange="computeTemp(event)"
+            type="number"
+            name="celsius"
+            id="celsius"
+            placeholder="Introduce la temperatura"
+            class="input"
+        >
+        </div>
+        <div class="temp-container">
+            <label for="fahrenheit">Fahrenheit</label>
+        <input
+            onchange="computeTemp(event)" 
+            type="number"
+            name="fahrenheit"
+            id="fahrenheit"
+            placeholder="Introduce la temperatura"
+            class="input"
+        >
+        </div>
+        <div class="temp-container">
+            <label for="kelvin">Kelvin</label>
+        <input
+            onchange="computeTemp(event)" 
+            type="text"
+            name="kelvin"
+            id="kelvin"
+            placeholder="Introduce la temperatura"
+            class="input"
+        >
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
